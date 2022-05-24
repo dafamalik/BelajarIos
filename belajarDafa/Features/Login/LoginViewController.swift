@@ -30,6 +30,8 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func login(_ sender: UIButton) {
+        
+        AlertHelper.showAlertViewController(vc: self, msg: "email or password can't empty")
         print("email yang diinput adalah",tfEmail.text ?? "")
         print("password yang diinput adalah",tfPassword.text ?? "")
     }
