@@ -8,6 +8,9 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    var iconClick = false
+    let imageIcon = UIImageView()
 
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var btnLogin: UIButton!
@@ -15,11 +18,37 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     
+    var isSecure = true
+    
+    @IBOutlet weak var imageMataKebuka: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupViews()
+        imageIcon.image = UIImage(named: "mataHidden")
+        
+        let tapGestureReconizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        imageMataKebuka.isUserInteractionEnabled = true
+        imageMataKebuka.addGestureRecognizer(tapGestureReconizer)
     }
+    
+    @objc func imageTapped(tapGestureRecognizer:UITapGestureRecognizer) {
+        
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        
+        if iconClick
+        {
+            iconClick = false
+            tappedImage.image = UIImage(named: "mata")
+            tfPassword.isSecureTextEntry = false
+        }
+        else {
+            iconClick = true
+            tappedImage.image = UIImage(named: "mataHidden")
+            tfPassword.isSecureTextEntry = true
+        }
+    }
+    
     
     func setupViews() {
         
@@ -32,7 +61,7 @@ class LoginViewController: UIViewController {
     @IBAction func login(_ sender: UIButton) {
         
         AlertHelper.showAlertViewController(vc: self, msg: "email or password can't empty")
-        print("email yang diinput adalah",tfEmail.text ?? "")
+        print("email yang diinput adalah",tfEmail.text ?? "" )
         print("password yang diinput adalah",tfPassword.text ?? "")
     }
 }

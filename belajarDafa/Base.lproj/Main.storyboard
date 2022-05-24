@@ -23,7 +23,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEc-lc-eHi">
-                                <rect key="frame" x="177.5" y="799" width="59.5" height="31"/>
+                                <rect key="frame" x="177.5" y="626.5" width="59.5" height="31"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login">
@@ -39,16 +39,23 @@
                                     <constraint firstAttribute="height" constant="150" id="BdY-O0-dNg"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAt-Y3-c4g" userLabel="Tf Email">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAt-Y3-c4g" userLabel="Tf Email">
                                 <rect key="frame" x="32" y="494.5" width="350" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="70c-M7-gaz">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="70c-M7-gaz">
                                 <rect key="frame" x="32" y="560.5" width="350" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mata" translatesAutoresizingMaskIntoConstraints="NO" id="LR2-fz-O1F">
+                                <rect key="frame" x="350" y="561.5" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="PYC-vA-UTX"/>
+                                    <constraint firstAttribute="height" constant="32" id="luJ-kA-umr"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -60,16 +67,19 @@
                             <constraint firstItem="70c-M7-gaz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Id2-ed-aoL"/>
                             <constraint firstItem="ACa-12-pkB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MFe-SP-kCB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="70c-M7-gaz" secondAttribute="trailing" constant="32" id="SIj-zG-ZSE"/>
+                            <constraint firstItem="LR2-fz-O1F" firstAttribute="trailing" secondItem="70c-M7-gaz" secondAttribute="trailing" id="bF5-nD-mMI"/>
                             <constraint firstItem="ACa-12-pkB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="btD-US-7QH"/>
                             <constraint firstItem="r6A-WV-Hxp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="cVb-6c-b9c"/>
+                            <constraint firstItem="LR2-fz-O1F" firstAttribute="centerY" secondItem="70c-M7-gaz" secondAttribute="centerY" id="dIg-H2-tcC"/>
+                            <constraint firstItem="BEc-lc-eHi" firstAttribute="top" secondItem="70c-M7-gaz" secondAttribute="bottom" constant="32" id="fLn-kc-OPF"/>
                             <constraint firstItem="BEc-lc-eHi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gJF-gS-QET"/>
                             <constraint firstItem="ACa-12-pkB" firstAttribute="top" secondItem="r6A-WV-Hxp" secondAttribute="bottom" constant="32" id="ghp-Qv-J4p"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r6A-WV-Hxp" secondAttribute="trailing" constant="32" id="jXI-3z-vql"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BEc-lc-eHi" secondAttribute="bottom" constant="32" id="mz3-UA-DMs"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnLogin" destination="BEc-lc-eHi" id="3eD-HF-hzb"/>
+                        <outlet property="imageMataKebuka" destination="LR2-fz-O1F" id="Ra9-nA-u9z"/>
                         <outlet property="lblTitle" destination="ACa-12-pkB" id="AdA-Tn-IEY"/>
                         <outlet property="tfEmail" destination="rAt-Y3-c4g" id="PDQ-pA-zOR"/>
                         <outlet property="tfPassword" destination="70c-M7-gaz" id="qZU-tb-Lrg"/>
@@ -82,6 +92,7 @@
     </scenes>
     <resources>
         <image name="dafaPhoto" width="720" height="720"/>
+        <image name="mata" width="512" height="512"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
