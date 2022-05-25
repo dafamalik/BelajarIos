@@ -18,6 +18,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     
+    @IBOutlet weak var btnPassword: UIButton!
+    @IBOutlet weak var imageEmilia: UIImageView!
     var isSecure = true
     
     @IBOutlet weak var imageMataKebuka: UIImageView!
@@ -56,12 +58,18 @@ class LoginViewController: UIViewController {
         btnLogin.layer.cornerRadius = 8
         tfEmail.layer.cornerRadius = 8
         tfPassword.layer.cornerRadius = 8
+        imageEmilia.layer.cornerRadius = 8
     }
 
     @IBAction func login(_ sender: UIButton) {
         
-        AlertHelper.showAlertViewController(vc: self, msg: "email or password can't empty")
+//        AlertHelper.showAlertViewController(vc: self, msg: "email or password can't empty")
         print("email yang diinput adalah",tfEmail.text ?? "" )
         print("password yang diinput adalah",tfPassword.text ?? "")
+    }
+    
+    @IBAction func forgotPassword(_ sender: UIButton) {
+        
+        AlertPasswordHelper.showAlertViewController(vc: self, msg: "Apakah kamu lupa password?")
     }
 }

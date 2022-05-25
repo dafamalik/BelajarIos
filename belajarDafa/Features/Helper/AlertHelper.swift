@@ -17,3 +17,14 @@ class AlertHelper {
     }
     
 }
+
+class AlertPasswordHelper {
+    
+   static func showAlertViewController(vc: UIViewController, msg: String) {
+        let alert = UIAlertController(title: "Alert", message: msg, preferredStyle: .alert)
+       alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: nil))
+       alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: nil))
+        vc.present(alert, animated: true, completion: nil)
+    }
+    
+}

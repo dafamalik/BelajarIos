@@ -16,14 +16,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wellcome DafaMalik" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACa-12-pkB">
-                                <rect key="frame" x="102" y="433.5" width="210" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wellcome Dafamalik" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACa-12-pkB">
+                                <rect key="frame" x="102" y="355.5" width="210" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emilia1" translatesAutoresizingMaskIntoConstraints="NO" id="r6A-WV-Hxp">
+                                <rect key="frame" x="32" y="123.5" width="350" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="BdY-O0-dNg"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAt-Y3-c4g" userLabel="Tf Email">
+                                <rect key="frame" x="32" y="416.5" width="350" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="70c-M7-gaz">
+                                <rect key="frame" x="32" y="482.5" width="350" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mata" translatesAutoresizingMaskIntoConstraints="NO" id="LR2-fz-O1F">
+                                <rect key="frame" x="350" y="483.5" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="PYC-vA-UTX"/>
+                                    <constraint firstAttribute="height" constant="32" id="luJ-kA-umr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emilia apps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3n-qR-Mg9">
+                                <rect key="frame" x="32" y="60" width="147.5" height="31.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvB-dm-cFW">
+                                <rect key="frame" x="139" y="524.5" width="136" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="forgot password?"/>
+                                <connections>
+                                    <action selector="forgotPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fgS-pn-X10"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEc-lc-eHi">
-                                <rect key="frame" x="177.5" y="626.5" width="59.5" height="31"/>
+                                <rect key="frame" x="177.5" y="587.5" width="59.5" height="31"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login">
@@ -31,31 +68,9 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QH9-U7-v43"/>
+                                    <segue destination="dK1-Ea-wcl" kind="presentation" modalPresentationStyle="fullScreen" id="tkp-wY-Htl"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dafaPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="r6A-WV-Hxp">
-                                <rect key="frame" x="32" y="251.5" width="350" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="BdY-O0-dNg"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAt-Y3-c4g" userLabel="Tf Email">
-                                <rect key="frame" x="32" y="494.5" width="350" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="70c-M7-gaz">
-                                <rect key="frame" x="32" y="560.5" width="350" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                            </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mata" translatesAutoresizingMaskIntoConstraints="NO" id="LR2-fz-O1F">
-                                <rect key="frame" x="350" y="561.5" width="32" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="32" id="PYC-vA-UTX"/>
-                                    <constraint firstAttribute="height" constant="32" id="luJ-kA-umr"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -63,22 +78,28 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rAt-Y3-c4g" secondAttribute="trailing" constant="32" id="1dC-SY-oc4"/>
                             <constraint firstItem="rAt-Y3-c4g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="4RI-1P-wPA"/>
                             <constraint firstItem="70c-M7-gaz" firstAttribute="top" secondItem="rAt-Y3-c4g" secondAttribute="bottom" constant="32" id="5hm-VB-gwr"/>
-                            <constraint firstItem="rAt-Y3-c4g" firstAttribute="top" secondItem="ACa-12-pkB" secondAttribute="bottom" constant="32" id="6HO-02-WVV"/>
+                            <constraint firstItem="VvB-dm-cFW" firstAttribute="top" secondItem="70c-M7-gaz" secondAttribute="bottom" constant="8" id="6mi-cu-fU1"/>
+                            <constraint firstItem="u3n-qR-Mg9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="8rc-nT-L9x"/>
+                            <constraint firstItem="rAt-Y3-c4g" firstAttribute="top" secondItem="ACa-12-pkB" secondAttribute="bottom" constant="32" id="AWJ-Eh-cdJ"/>
+                            <constraint firstItem="ACa-12-pkB" firstAttribute="top" secondItem="r6A-WV-Hxp" secondAttribute="bottom" constant="32" id="E1t-R7-R9T"/>
                             <constraint firstItem="70c-M7-gaz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Id2-ed-aoL"/>
-                            <constraint firstItem="ACa-12-pkB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MFe-SP-kCB"/>
+                            <constraint firstItem="r6A-WV-Hxp" firstAttribute="top" secondItem="u3n-qR-Mg9" secondAttribute="bottom" constant="32" id="PqB-dV-0dV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="70c-M7-gaz" secondAttribute="trailing" constant="32" id="SIj-zG-ZSE"/>
                             <constraint firstItem="LR2-fz-O1F" firstAttribute="trailing" secondItem="70c-M7-gaz" secondAttribute="trailing" id="bF5-nD-mMI"/>
-                            <constraint firstItem="ACa-12-pkB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="btD-US-7QH"/>
                             <constraint firstItem="r6A-WV-Hxp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="cVb-6c-b9c"/>
+                            <constraint firstItem="VvB-dm-cFW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dF6-TF-NY7"/>
                             <constraint firstItem="LR2-fz-O1F" firstAttribute="centerY" secondItem="70c-M7-gaz" secondAttribute="centerY" id="dIg-H2-tcC"/>
-                            <constraint firstItem="BEc-lc-eHi" firstAttribute="top" secondItem="70c-M7-gaz" secondAttribute="bottom" constant="32" id="fLn-kc-OPF"/>
                             <constraint firstItem="BEc-lc-eHi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gJF-gS-QET"/>
-                            <constraint firstItem="ACa-12-pkB" firstAttribute="top" secondItem="r6A-WV-Hxp" secondAttribute="bottom" constant="32" id="ghp-Qv-J4p"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r6A-WV-Hxp" secondAttribute="trailing" constant="32" id="jXI-3z-vql"/>
+                            <constraint firstItem="BEc-lc-eHi" firstAttribute="top" secondItem="VvB-dm-cFW" secondAttribute="bottom" constant="32" id="oJj-5W-zFT"/>
+                            <constraint firstItem="u3n-qR-Mg9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="pZJ-wS-AXc"/>
+                            <constraint firstItem="ACa-12-pkB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qQu-kP-l2d"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnLogin" destination="BEc-lc-eHi" id="3eD-HF-hzb"/>
+                        <outlet property="btnPassword" destination="VvB-dm-cFW" id="OZ2-RV-0tY"/>
+                        <outlet property="imageEmilia" destination="r6A-WV-Hxp" id="cWd-Oi-9kg"/>
                         <outlet property="imageMataKebuka" destination="LR2-fz-O1F" id="Ra9-nA-u9z"/>
                         <outlet property="lblTitle" destination="ACa-12-pkB" id="AdA-Tn-IEY"/>
                         <outlet property="tfEmail" destination="rAt-Y3-c4g" id="PDQ-pA-zOR"/>
@@ -87,11 +108,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-41" y="-12"/>
+            <point key="canvasLocation" x="-42.028985507246382" y="-12.053571428571429"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ezn-on-TLt">
+            <objects>
+                <viewController id="dK1-Ea-wcl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UMw-Y2-fmJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emilia" translatesAutoresizingMaskIntoConstraints="NO" id="pPP-af-LlY">
+                                <rect key="frame" x="-89.5" y="151.5" width="593" height="593"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7hL-06-fgG"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="pPP-af-LlY" firstAttribute="centerY" secondItem="UMw-Y2-fmJ" secondAttribute="centerY" id="IRG-0t-FOJ"/>
+                            <constraint firstItem="pPP-af-LlY" firstAttribute="centerX" secondItem="UMw-Y2-fmJ" secondAttribute="centerX" id="e6j-Pp-BMi"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WR9-3e-9cV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="803" y="-12"/>
         </scene>
     </scenes>
     <resources>
-        <image name="dafaPhoto" width="720" height="720"/>
+        <image name="emilia" width="593" height="593"/>
+        <image name="emilia1" width="700" height="394"/>
         <image name="mata" width="512" height="512"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
